@@ -1,9 +1,10 @@
 const AWS = require('aws-sdk');
+require('dotenv').config();
 const iam = new AWS.IAM();
 AWS.config.update({
-    accessKeyId: 'AKIA47GB74NM542JLR6D',
-    secretAccessKey: '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',
-    region: 'eu-central-1'
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    region: process.env.AWS_REGION
 });
 
 
